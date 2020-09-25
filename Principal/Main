@@ -1,0 +1,68 @@
+package Main;
+
+import Logica.Principal;
+import javax.swing.JOptionPane;
+
+
+public class Main {
+    
+    
+    private  static String respuesta;
+    public static void main(String args[]){
+        Principal g=new Principal();
+        int op = 0;
+           do{
+      try{ 
+         
+   op=Integer.parseInt(JOptionPane.showInputDialog("==============BIENVENIDO A OPERACIONES ARITMETRICAS=================="+"\n"
+                  
+                  + "INGRESE EL TIPO DE OPERACION DE (1 al 5) "+"\n"
+                  + "1.SUMA"+"\n"
+                  + "2.RESTA"+"\n"
+                  + "3. MULTIPLICACION"+"\n"
+                  + "4. DIVISION"+"\n"
+                  + "5. SALIR"));
+    
+  
+ 
+    
+  } catch(NumberFormatException a){
+          System.out.println("VALOR FUERA DE RANGO"+a.getMessage());
+       
+       }
+     
+         
+        switch (op) {
+            case 1:
+                System.out.println("RESULTADO DE LA SUMA ES:="+g.getSuma());
+               
+                break;
+            case 2:
+              
+                System.out.println("RESULTADO DE LA RESTA ES:="+g.getResta());
+                
+                break;
+            case 3:
+                System.out.println("RESULTADO DE LA MULTIPLICACION:="+g.getMult());
+               
+                break;
+            case 4:
+                System.out.println("RESULTADO DE LA DIVICION ES:="+g.getDivision());
+               break;
+            case 5:
+                JOptionPane.showMessageDialog(null,"Saliendo");
+                break;
+            default:
+                 break;
+                      
+       } respuesta = JOptionPane.showInputDialog("DE SEAS CONTINUAR");
+              
+       respuesta=respuesta.toUpperCase();
+       
+     }while(!respuesta.equals("NO"));
+               
+   }
+           
+}
+           
+
