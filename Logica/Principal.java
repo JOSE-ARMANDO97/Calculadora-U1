@@ -35,6 +35,11 @@ public  class Principal  {
       public final double getDivision(){
           num1 =Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL VALOR DEL NUMEROM1 "));
           num2=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL VALOR DEL NUMEROM2"));
+          if((num1==0)&&(num2>0)){
+              System.out.println("ERROR INTENTA DIVIDIR ENTRE CERO");
+          }else if((num1>0)&&(num2==0)){
+              System.out.println("ERROR INTENTA DIVIDIR ENTRE CERO");
+          }
     division=num1/num2;
      
         return division;
@@ -43,5 +48,3 @@ public  class Principal  {
 }
       
      
-
- 
